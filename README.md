@@ -7,9 +7,9 @@
 
 ## Instructions
 
-1). Clone the following Github repository from the link: https://github.com/dipikachadha/frontend-nanodegree-feedreader
+1). Clone the following Github repository from the link: https://github.com/dipikachadha/project-pixel-art-maker-starter
 2). Open index.html in the browser.
-3). Once you open the page you will see input fields for Grid maker where u can insert number of rows and columms.
+3). Once you open the page you will see input fields for Grid maker where u can insert number of rows and columns.
 4). On clicking "Pick a Color" color bar will pop up and one can choose color of choice and can paint the grid.
 
 
