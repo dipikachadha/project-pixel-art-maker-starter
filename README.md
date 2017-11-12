@@ -7,12 +7,10 @@
 
 ## Instructions
 
-1. Clone the following Github repository from the link: https://github.com/dipikachadha/project-pixel-art-maker-starter
-2. Open index.html in the browser.
-3. Once you open the page you will see input fields for Grid maker where u can insert number of rows and columns.
-4. On clicking "Pick a Color" color bar will pop up and one can choose color of choice and can paint the grid.
+To get started, open `designs.js` and start building out the app's functionality.
 
-
+For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
 
 ## Contributing
-1. Guidance taken from discussion forum, internet sources and github.
+
+This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.

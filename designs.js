@@ -1,51 +1,46 @@
-//defaults
-// const tBody = document.createElement("tbody");
-// document.getElementById("pixel_canvas").appendChild(tBody);
+// Select color input
+//const colorInput = $('colorPicker');
+ let colorInput = document.getElementById("colorPicker").value
 
-document.getElementById("pixel_canvas").innerHTML="<tbody></tbody>";
+// Select size input
 
-let color = document.getElementById("colorPicker").value;
 
-//makeGrid
-function makeGrid(height, width){
-	//clear table body
-	document.getElementsByTagName("tbody")[0].innerHTML = "";
 
-	//function to create cells to insert
-  const stringToInsert = function (height, width) {
-		let result = "";
-		for (let i = 0; i < height; i++) {
-	    result += "<tr>";
-	    for (let j = 0; j < width; j++) {
-	      result += "<td></td>";
-	    }
-	    result += "</tr>";
-		}
-		return result;
-	};
+//var list = document.getElementsByTagName("UL")[0];
+//list.getElementsByTagName("LI")[0].innerHTML = "Milk";
 
-	//make the actual grid
-  document.getElementsByTagName("tbody")[0].innerHTML =
-		stringToInsert(height,width);
-}
 
-//submit button event listener
-document.getElementsByTagName("input")[2]
-				.addEventListener("click",function(event){
-	event.preventDefault();
-	let inputHeight = document.getElementById('input_height').value;
-	let inputWidth = document.getElementById('input_width').value;
-	makeGrid(inputHeight, inputWidth);
-});
+// When size is submitted by the user, call makeGrid()
+  document.getElementById("pixel_canvas").innerHTML = " ";
+  document.getElementsByTagName("input")[0].innerHTML = " ";
+ document.getElementsByTagName("input")[2].addEventListener("click", function(event) {
+         event.preventDefault();
+         let gridHeight = document.getElementById("input_height").value
+         let gridWidth = document.getElementById("input_width").value
 
-//make color picker event listener
+    function makeGrid() {
+
+      // Your code goes here!
+      for(let i = 0; i < gridHeight; i++) {
+         let grid = '';
+        grid +="<tr>";
+        for(let j = 0; j< gridWidth; j++) {
+          grid +="<td></td>";
+        }
+        grid +="</tr>";
+      }
+    }
+    makeGrid();
+  });
+
+  //make color picker event listener
 document.getElementById("colorPicker")
-				.addEventListener("change",function(event){
-	color = document.getElementById("colorPicker").value;
-});
+  				.addEventListener("change",function(event){
+  	colorInput = document.getElementById("colorPicker").value;
+  });
 
-//make the td cells selectable / colorable
-document.getElementById("pixel_canvas")
-				.addEventListener("click",function(event){
-	event.target.style.backgroundColor = color;
-},false);
+  //make the td cells selectable / colorable
+  document.getElementById("pixel_canvas")
+  				.addEventListener("click",function(event){
+  	event.target.style.backgroundColor = colorInput;
+  },false);
