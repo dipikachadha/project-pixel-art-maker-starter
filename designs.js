@@ -7,15 +7,15 @@ $(document).ready(function() {
   document.getElementsByTagName("input")[2].addEventListener("click",
   function(event) {
     event.preventDefault();
-    let gridHeight = document.getElementById("input_height").value;
-    let gridWidth = document.getElementById("input_width").value;
+    const gridHeight = document.getElementById("input_height").value;
+    const gridWidth = document.getElementById("input_width").value;
 
     function makeGrid() {
       let grid = '';
       for(let i = 0; i < gridHeight; i++) {
-        grid +="<tr>";
-        for(let j = 0; j< gridWidth; j++) {
-          grid +="<td></td>";
+        grid += "<tr>";
+        for(let j = 0; j < gridWidth; j++) {
+          grid += "<td></td>";
         }
         grid +="</tr>";
       }
@@ -32,7 +32,9 @@ $(document).ready(function() {
 
   //make the td cells selectable / colorable
   document.getElementById("pixel_canvas")
-  .addEventListener("click",function(event){
-    event.target.style.backgroundColor = colorInput;
+   .addEventListener("click",function(event){
+     if (event.target && event.target.nodeName == "TD") {
+      event.target.style.backgroundColor = colorInput;
+     }
   });
 });
