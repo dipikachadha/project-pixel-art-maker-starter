@@ -11,15 +11,13 @@ $(document).ready(function() {
     const gridWidth = document.getElementById("input_width").value;
 
     function makeGrid() {
-      let grid = '';
+      const grid = document.getElementById("pixel_canvas");
       for(let i = 0; i < gridHeight; i++) {
-        grid += "<tr>";
+        const row = grid.insertRow(i);
         for(let j = 0; j < gridWidth; j++) {
-          grid += "<td></td>";
+          row.insertCell(j);
         }
-        grid +="</tr>";
       }
-      document.getElementById("pixel_canvas").innerHTML = grid;
     }
     makeGrid();
   });
